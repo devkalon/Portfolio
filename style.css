@@ -1,0 +1,277 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+:root {
+  --bg: #f8f9fa;
+  --text: #222;
+  --primary: #0078d7;
+  --card: #fff;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f1f1f1;
+  --primary: #00aaff;
+  --card: #1e1e1e;
+}
+
+/* Header */
+header {
+  background: var(--primary);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.4rem;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a.active,
+nav a:hover {
+  text-decoration: underline;
+}
+
+#theme-toggle {
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Sections */
+.intro, .resume-section, .bio-section {
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 30px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.highlight {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: var(--primary);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+/* Skills */
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.skills li {
+  background: var(--primary);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+.couresework{
+    list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.couresework li {
+  background: var(--primary);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: var(--primary);
+  color: white;
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav a {
+    display: inline-block;
+    margin: 8px;
+  }
+  .intro, .resume-section, .bio-section {
+    padding: 20px;
+  }
+}
+
+/* --- HERO (PROFILE) SECTION --- */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--card);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  margin: 50px auto;
+  max-width: 900px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.08);
+}
+
+.hero p {
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+/* --- ABOUT SECTION --- */
+.about {
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 30px;
+  background: var(--card);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.about p {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* --- SOCIAL SECTION --- */
+.social {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.social-icon {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+  transition: 0.3s;
+}
+
+.github { background: #333; }
+.linkedin { background: #0077b5; }
+.instagram { background: #e4405f; }
+
+.social-icon:hover {
+  opacity: 0.85;
+  transform: translateY(-3px);
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about, .hero {
+    padding: 20px;
+  }
+
+  .social-icon {
+    padding: 8px 14px;
+  }
+}
